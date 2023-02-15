@@ -1,0 +1,41 @@
+:root {
+	color-scheme: dark light;
+
+	--max-content-width: 1000px;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+	}
+}
+
+html,
+body {
+	font-family: system-ui, sans-serif;
+	padding: 0;
+	margin: 0;
+	color: white;
+	background-color: #272727;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+code {
+	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+		Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+button,
+[role="button"] {
+	all: unset;
+	display: inline-block;
+	text-align: center;
+	border-radius: 0.5rem;
+}
+
+button:focus-visible,
+[role="button"]:focus-visible {
+	outline: 3px solid #decbb7;
+}
