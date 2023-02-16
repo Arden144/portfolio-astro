@@ -8,7 +8,11 @@ const posts = await getCollection("projects");
   {
     posts.map(async (post) => {
       const { Content } = await post.render();
-      return <Content />;
+      return (
+        <article>
+          <Content />
+        </article>
+      );
     })
   }
 </Layout>
