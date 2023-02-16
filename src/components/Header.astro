@@ -4,36 +4,21 @@ import Navigation from "./Navigation.astro";
 ---
 
 <header>
-	<Icon name="logo" />
-	<Navigation />
+  <Icon name="logo" />
+  <Navigation />
 </header>
 
 <style>
-	[astro-icon] {
-		height: 100%;
-		padding: 0.25rem 0;
-		color: #c2b2b4;
-	}
+  [astro-icon] {
+    height: 100%;
+    padding: 0.25rem 0;
+  }
 
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		height: 5rem;
-		padding: 1rem;
-	}
-
-	@media only screen and (min-width: 30em) {
-		[astro-icon] {
-			height: 2rem;
-		}
-
-		header {
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: flex-start;
-			gap: 2rem;
-			height: auto;
-		}
-	}
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 1rem;
+  }
 </style>
