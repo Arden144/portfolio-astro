@@ -1,20 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+const posts = await getCollection("projects");
 ---
 
 <Layout title="Arden Sinclair">
-	<h2>Hello World</h2>
-	<p>
-		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi quod enim vero quo officia
-		assumenda totam asperiores, labore numquam excepturi, maiores sint. Repellendus adipisci rerum
-		eligendi laborum incidunt quaerat perferendis? Lorem ipsum dolor sit amet consectetur
-		adipisicing elit. A est tempore sed nobis dolor provident accusamus esse nam animi, fugit
-		quisquam porro voluptates, odit ab? Magni odit laboriosam quo inventore.
-	</p>
-	<h2>Something else</h2>
-	<p>
-		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad a eligendi optio quibusdam
-		excepturi nisi neque laborum consequuntur nobis tenetur voluptatibus totam quia facilis dolorum
-		vel, doloribus quos dolor harum.
-	</p>
+  {
+    posts.map(async (post) => {
+      const { Content } = await post.render();
+      return <Content />;
+    })
+  }
 </Layout>
